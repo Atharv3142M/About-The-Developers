@@ -14,7 +14,7 @@
         }
 
         body {
-            background: #ffffff;
+            background: #3c393d;
             color: #333;
             line-height: 1.6;
         }
@@ -29,35 +29,37 @@
             text-align: center;
             font-size: 3rem;
             margin-bottom: 3rem;
-            color: #FF6B00;
-            text-shadow: 0 0 10px rgba(255, 107, 0, 0.2);
+            color: #C19A6B;
+            text-shadow: 0 0 10px rgba(193, 154, 107, 0.2);
         }
 
         .developers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
 
         .developer-card {
-            background: #fff;
+            background: white;
             border-radius: 15px;
             padding: 1.5rem;
             position: relative;
             overflow: hidden;
             transition: transform 0.3s ease;
-            border: 2px solid #FFE5D4;
-            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.1);
+            border: 2px solid #C19A6B;
+            box-shadow: 0 4px 15px rgba(193, 154, 107, 0.1);
+            margin-bottom: 2rem;
         }
 
         .developer-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 20px rgba(255, 107, 0, 0.2);
+            box-shadow: 0 0 20px rgba(193, 154, 107, 0.3);
         }
 
-        /* Center 4th card */
         .developer-card:last-child {
+            grid-column: 1 / -1;
             margin: 0 auto;
+            max-width: 600px;
         }
 
         .developer-image {
@@ -65,20 +67,20 @@
             height: 150px;
             border-radius: 50%;
             margin: 0 auto 1rem;
-            border: 3px solid #FF6B00;
+            border: 3px solid #C19A6B;
             object-fit: cover;
         }
 
         .developer-name {
             text-align: center;
-            color: #FF6B00;
+            color: #3c393d;
             margin-bottom: 0.5rem;
             font-size: 1.5rem;
         }
 
         .developer-role {
             text-align: center;
-            color: #FF9100;
+            color: #C19A6B;
             margin-bottom: 1rem;
             font-weight: 500;
         }
@@ -92,12 +94,13 @@
         }
 
         .skill {
-            background: #FFF0E6;
-            color: #FF6B00;
+            background: #F5F0EC;
+            color: #3c393d;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.9rem;
             font-weight: 500;
+            border: 1px solid #C19A6B;
         }
 
         .bio {
@@ -114,13 +117,13 @@
         }
 
         .social-link {
-            color: #FF6B00;
+            color: #C19A6B;
             font-size: 1.5rem;
             transition: color 0.3s ease;
         }
 
         .social-link:hover {
-            color: #FF4500;
+            color: #3c393d;
         }
 
         @media (max-width: 768px) {
@@ -129,7 +132,12 @@
             }
             
             .developer-card:last-child {
-                width: 100%;
+                grid-column: auto;
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -138,9 +146,9 @@
     <div class="container">
         <h1>Development Team</h1>
         <div class="developers-grid">
-            <!-- Atharv Pose -->
+            <!-- Row 1 -->
             <div class="developer-card">
-                <img src="developer1.jpg" alt="Atharv Pose" class="developer-image">
+                <img src="atharv.jpg" alt="Atharv Pose" class="developer-image">
                 <h2 class="developer-name">Atharv Pose</h2>
                 <p class="developer-role">Frontend Developer</p>
                 <div class="skills">
@@ -148,64 +156,62 @@
                     <span class="skill">CSS3</span>
                     <span class="skill">JavaScript</span>
                 </div>
-                <p class="bio">UI/UX enthusiast with expertise in creating engaging gaming interfaces. Passionate about blending aesthetics with functionality for seamless player experiences.</p>
+                <p class="bio">UI/UX specialist crafting immersive gaming experiences. Expert in responsive design and interactive gameplay interfaces.</p>
                 <div class="social-links">
                     <a href="#" class="social-link"><i class="fab fa-github"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-codepen"></i></a>
                 </div>
             </div>
 
-            <!-- Shivansh Kushwaha -->
             <div class="developer-card">
-                <img src="developer2.jpg" alt="Shivansh Kushwaha" class="developer-image">
+                <img src="shivansh.jpg" alt="Shivansh Kushwaha" class="developer-image">
                 <h2 class="developer-name">Shivansh Kushwaha</h2>
                 <p class="developer-role">Backend Developer</p>
                 <div class="skills">
                     <span class="skill">Python</span>
                     <span class="skill">Django</span>
-                    <span class="skill">REST API</span>
+                    <span class="skill">API Design</span>
                 </div>
-                <p class="bio">Backend wizard specializing in robust gaming architectures. Loves solving complex problems and building scalable gaming platforms.</p>
+                <p class="bio">Backend architect building robust gaming infrastructures. Specializes in scalable solutions and efficient server-side logic.</p>
                 <div class="social-links">
                     <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-stack-overflow"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-dev"></i></a>
                 </div>
             </div>
 
-            <!-- Suraj Layak -->
+            <!-- Row 2 -->
             <div class="developer-card">
-                <img src="developer3.jpg" alt="Suraj Layak" class="developer-image">
+                <img src="suraj.jpg" alt="Suraj Layak" class="developer-image">
                 <h2 class="developer-name">Suraj Layak</h2>
                 <p class="developer-role">Database Architect</p>
                 <div class="skills">
                     <span class="skill">MySQL</span>
                     <span class="skill">MongoDB</span>
-                    <span class="skill">Redis</span>
+                    <span class="skill">Database Design</span>
                 </div>
-                <p class="bio">Data management expert focused on optimizing game performance through efficient database design and query optimization.</p>
+                <p class="bio">Data management expert optimizing gaming databases for peak performance and reliability.</p>
                 <div class="social-links">
                     <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-stack-overflow"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-medium"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-aws"></i></a>
                 </div>
             </div>
 
-            <!-- Mayuresh Rathod (Centered) -->
             <div class="developer-card">
-                <img src="developer4.jpg" alt="Mayuresh Rathod" class="developer-image">
+                <img src="mayuresh.jpg" alt="Mayuresh Rathod" class="developer-image">
                 <h2 class="developer-name">Mayuresh Rathod</h2>
-                <p class="developer-role" style="color: #FF4500;">Team Catalyst</p>
+                <p class="developer-role">Team Catalyst</p>
                 <div class="skills">
                     <span class="skill">Motivation</span>
                     <span class="skill">Team Building</span>
-                    <span class="skill">Positive Vibes</span>
+                    <span class="skill">Positive Energy</span>
                 </div>
-                <p class="bio">The heart of our team, ensuring smooth collaboration and maintaining high morale. Our secret weapon for productive hackathons and creative breakthroughs.</p>
+                <p class="bio">The driving force behind team synergy, fostering collaboration and maintaining high morale through every development challenge.</p>
                 <div class="social-links">
                     <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-slack"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
                 </div>
             </div>
@@ -213,7 +219,7 @@
     </div>
 
     <script>
-        // Add hover animation effect
+        // Hover animation effect
         document.querySelectorAll('.developer-card').forEach(card => {
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
@@ -221,12 +227,12 @@
                 const y = e.clientY - rect.top;
 
                 card.style.transform = `perspective(1000px) rotateX(${(y - rect.height/2)/10}deg) rotateY(${-(x - rect.width/2)/10}deg) translateY(-10px)`;
-                card.style.boxShadow = `0 0 30px rgba(255, 107, 0, 0.3)`;
+                card.style.boxShadow = `0 0 30px rgba(193, 154, 107, 0.3)`;
             });
 
             card.addEventListener('mouseleave', () => {
                 card.style.transform = 'translateY(0)';
-                card.style.boxShadow = '0 4px 15px rgba(255, 107, 0, 0.1)';
+                card.style.boxShadow = '0 4px 15px rgba(193, 154, 107, 0.1)';
             });
         });
     </script>
