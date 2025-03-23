@@ -1,50 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About the Developers | GameBlog</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Previous styles remain same until .developer-card:last-child */
-        
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background: #3c393d;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        color: #ff5722;  /* Changed to orange */
+        text-shadow: 0 0 10px rgba(255, 87, 34, 0.2);
+    }
+
+    .developers-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .developer-card {
+        background: white;
+        border-radius: 15px;
+        padding: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        border: 2px solid #ff5722;  /* Changed to orange */
+        box-shadow: 0 4px 15px rgba(255, 87, 34, 0.1);
+    }
+
+    .developer-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 20px rgba(255, 87, 34, 0.3);  /* Orange glow */
+    }
+
+    /* Removed :last-child specific styles */
+    
+    .developer-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 0 auto 1rem;
+        border: 3px solid #ff5722;  /* Orange border */
+        object-fit: cover;
+    }
+
+    .developer-name {
+        text-align: center;
+        color: #3c393d;
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .developer-role {
+        text-align: center;
+        color: #ff5722;  /* Orange color */
+        margin-bottom: 1rem;
+        font-weight: 500;
+    }
+
+    .skill {
+        background: #FFF3E0;  /* Orange tint */
+        color: #3c393d;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border: 1px solid #ff5722;  /* Orange border */
+    }
+
+    .social-link {
+        color: #ff5722;  /* Orange color */
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .social-link:hover {
+        color: #3c393d;
+    }
+
+    @media (max-width: 768px) {
         .developers-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+            grid-template-columns: 1fr;
         }
-
-        .developer-card {
-            background: white;
-            border-radius: 15px;
-            padding: 1.5rem;
-            transition: transform 0.3s ease;
-            border: 2px solid #C19A6B;
-            box-shadow: 0 4px 15px rgba(193, 154, 107, 0.1);
-            margin-bottom: 0; /* Remove individual card margins */
-        }
-
-        /* Remove the :last-child specific styles */
-        .developer-card:last-child {
-            grid-column: unset;
-            margin: unset;
-            max-width: unset;
-        }
-
-        @media (max-width: 768px) {
-            .developers-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            /* Remove last-child specific styles for mobile */
-            .developer-card:last-child {
-                grid-column: unset;
-                max-width: unset;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Rest of the HTML remains the same -->
-</body>
-</html>
+        
+        /* Removed last-child specific styles */
+    }
+</style>
