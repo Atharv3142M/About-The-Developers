@@ -14,8 +14,8 @@
         }
 
         body {
-            background: #1a1a1a;
-            color: #fff;
+            background: #ffffff;
+            color: #333;
             line-height: 1.6;
         }
 
@@ -29,8 +29,8 @@
             text-align: center;
             font-size: 3rem;
             margin-bottom: 3rem;
-            color: #00ff00;
-            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            color: #FF6B00;
+            text-shadow: 0 0 10px rgba(255, 107, 0, 0.2);
         }
 
         .developers-grid {
@@ -40,18 +40,24 @@
         }
 
         .developer-card {
-            background: #2d2d2d;
+            background: #fff;
             border-radius: 15px;
             padding: 1.5rem;
             position: relative;
             overflow: hidden;
             transition: transform 0.3s ease;
-            border: 2px solid #3d3d3d;
+            border: 2px solid #FFE5D4;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.1);
         }
 
         .developer-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 20px rgba(0, 180, 216, 0.4);
+            box-shadow: 0 0 20px rgba(255, 107, 0, 0.2);
+        }
+
+        /* Center 4th card */
+        .developer-card:last-child {
+            margin: 0 auto;
         }
 
         .developer-image {
@@ -59,22 +65,22 @@
             height: 150px;
             border-radius: 50%;
             margin: 0 auto 1rem;
-            border: 3px solid #00b4d8;
+            border: 3px solid #FF6B00;
             object-fit: cover;
         }
 
         .developer-name {
             text-align: center;
-            color: #00b4d8;
+            color: #FF6B00;
             margin-bottom: 0.5rem;
             font-size: 1.5rem;
         }
 
         .developer-role {
             text-align: center;
-            color: #00ff00;
+            color: #FF9100;
             margin-bottom: 1rem;
-            font-weight: 300;
+            font-weight: 500;
         }
 
         .skills {
@@ -82,19 +88,23 @@
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-bottom: 1rem;
+            justify-content: center;
         }
 
         .skill {
-            background: #404040;
+            background: #FFF0E6;
+            color: #FF6B00;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.9rem;
+            font-weight: 500;
         }
 
         .bio {
             font-size: 0.95rem;
             margin-bottom: 1.5rem;
-            color: #ccc;
+            color: #666;
+            text-align: center;
         }
 
         .social-links {
@@ -104,38 +114,41 @@
         }
 
         .social-link {
-            color: #fff;
+            color: #FF6B00;
             font-size: 1.5rem;
             transition: color 0.3s ease;
         }
 
         .social-link:hover {
-            color: #00b4d8;
+            color: #FF4500;
         }
 
         @media (max-width: 768px) {
             .developers-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .developer-card:last-child {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Game Development Team</h1>
+        <h1>Development Team</h1>
         <div class="developers-grid">
-            <!-- Developer 1 -->
+            <!-- Atharv Pose -->
             <div class="developer-card">
-                <img src="https://via.placeholder.com/150" alt="Developer 1" class="developer-image">
-                <h2 class="developer-name">Alex Carter</h2>
-                <p class="developer-role">Lead Frontend Developer</p>
+                <img src="developer1.jpg" alt="Atharv Pose" class="developer-image">
+                <h2 class="developer-name">Atharv Pose</h2>
+                <p class="developer-role">Frontend Developer</p>
                 <div class="skills">
                     <span class="skill">HTML5</span>
                     <span class="skill">CSS3</span>
                     <span class="skill">JavaScript</span>
-                    <span class="skill">React</span>
                 </div>
-                <p class="bio">Passionate about creating immersive gaming interfaces. 5+ years experience in building responsive gaming platforms and optimizing player experiences.</p>
+                <p class="bio">UI/UX enthusiast with expertise in creating engaging gaming interfaces. Passionate about blending aesthetics with functionality for seamless player experiences.</p>
                 <div class="social-links">
                     <a href="#" class="social-link"><i class="fab fa-github"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
@@ -143,18 +156,17 @@
                 </div>
             </div>
 
-            <!-- Developer 2 -->
+            <!-- Shivansh Kushwaha -->
             <div class="developer-card">
-                <img src="https://via.placeholder.com/150" alt="Developer 2" class="developer-image">
-                <h2 class="developer-name">Sarah Johnson</h2>
-                <p class="developer-role">Backend Architect</p>
+                <img src="developer2.jpg" alt="Shivansh Kushwaha" class="developer-image">
+                <h2 class="developer-name">Shivansh Kushwaha</h2>
+                <p class="developer-role">Backend Developer</p>
                 <div class="skills">
                     <span class="skill">Python</span>
                     <span class="skill">Django</span>
-                    <span class="skill">MySQL</span>
-                    <span class="skill">AWS</span>
+                    <span class="skill">REST API</span>
                 </div>
-                <p class="bio">Backend specialist with a love for scalable gaming infrastructures. Developed matchmaking systems for AAA titles and blockchain gaming solutions.</p>
+                <p class="bio">Backend wizard specializing in robust gaming architectures. Loves solving complex problems and building scalable gaming platforms.</p>
                 <div class="social-links">
                     <a href="#" class="social-link"><i class="fab fa-github"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
@@ -162,41 +174,39 @@
                 </div>
             </div>
 
-            <!-- Developer 3 -->
+            <!-- Suraj Layak -->
             <div class="developer-card">
-                <img src="https://via.placeholder.com/150" alt="Developer 3" class="developer-image">
-                <h2 class="developer-name">Jamie Lee</h2>
-                <p class="developer-role">Full Stack Developer</p>
+                <img src="developer3.jpg" alt="Suraj Layak" class="developer-image">
+                <h2 class="developer-name">Suraj Layak</h2>
+                <p class="developer-role">Database Architect</p>
                 <div class="skills">
-                    <span class="skill">Node.js</span>
+                    <span class="skill">MySQL</span>
                     <span class="skill">MongoDB</span>
-                    <span class="skill">Unity</span>
-                    <span class="skill">C#</span>
+                    <span class="skill">Redis</span>
                 </div>
-                <p class="bio">Indie game developer turned full-stack expert. Creator of several popular browser-based MMO games and open-source gaming tools.</p>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-steam"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
-                </div>
-            </div>
-
-            <!-- Developer 4 -->
-            <div class="developer-card">
-                <img src="https://via.placeholder.com/150" alt="Developer 4" class="developer-image">
-                <h2 class="developer-name">Marcus Chen</h2>
-                <p class="developer-role">Gameplay Developer</p>
-                <div class="skills">
-                    <span class="skill">C++</span>
-                    <span class="skill">Unreal Engine</span>
-                    <span class="skill">DirectX</span>
-                    <span class="skill">OpenGL</span>
-                </div>
-                <p class="bio">Low-level programming enthusiast with focus on game physics and graphics rendering. Contributed to multiple award-winning game engines.</p>
+                <p class="bio">Data management expert focused on optimizing game performance through efficient database design and query optimization.</p>
                 <div class="social-links">
                     <a href="#" class="social-link"><i class="fab fa-github"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-stack-overflow"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-medium"></i></a>
+                </div>
+            </div>
+
+            <!-- Mayuresh Rathod (Centered) -->
+            <div class="developer-card">
+                <img src="developer4.jpg" alt="Mayuresh Rathod" class="developer-image">
+                <h2 class="developer-name">Mayuresh Rathod</h2>
+                <p class="developer-role" style="color: #FF4500;">Team Catalyst</p>
+                <div class="skills">
+                    <span class="skill">Motivation</span>
+                    <span class="skill">Team Building</span>
+                    <span class="skill">Positive Vibes</span>
+                </div>
+                <p class="bio">The heart of our team, ensuring smooth collaboration and maintaining high morale. Our secret weapon for productive hackathons and creative breakthroughs.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
                 </div>
             </div>
         </div>
@@ -211,12 +221,12 @@
                 const y = e.clientY - rect.top;
 
                 card.style.transform = `perspective(1000px) rotateX(${(y - rect.height/2)/10}deg) rotateY(${-(x - rect.width/2)/10}deg) translateY(-10px)`;
-                card.style.boxShadow = `0 0 30px rgba(0, 180, 216, 0.6)`;
+                card.style.boxShadow = `0 0 30px rgba(255, 107, 0, 0.3)`;
             });
 
             card.addEventListener('mouseleave', () => {
                 card.style.transform = 'translateY(0)';
-                card.style.boxShadow = '0 0 20px rgba(0, 180, 216, 0.4)';
+                card.style.boxShadow = '0 4px 15px rgba(255, 107, 0, 0.1)';
             });
         });
     </script>
