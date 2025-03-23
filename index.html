@@ -1,103 +1,235 @@
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-        background: #3c393d;
-        color: #333;
-        line-height: 1.6;
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem;
-    }
-
-    h1 {
-        text-align: center;
-        font-size: 3rem;
-        margin-bottom: 3rem;
-        color: #ff5722;  /* Changed to orange */
-        text-shadow: 0 0 10px rgba(255, 87, 34, 0.2);
-    }
-
-    .developers-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-    .developer-card {
-        background: white;
-        border-radius: 15px;
-        padding: 1.5rem;
-        position: relative;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-        border: 2px solid #ff5722;  /* Changed to orange */
-        box-shadow: 0 4px 15px rgba(255, 87, 34, 0.1);
-    }
-
-    .developer-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 0 20px rgba(255, 87, 34, 0.3);  /* Orange glow */
-    }
-
-    /* Removed :last-child specific styles */
-    
-    .developer-image {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        margin: 0 auto 1rem;
-        border: 3px solid #ff5722;  /* Orange border */
-        object-fit: cover;
-    }
-
-    .developer-name {
-        text-align: center;
-        color: #3c393d;
-        margin-bottom: 0.5rem;
-        font-size: 1.5rem;
-    }
-
-    .developer-role {
-        text-align: center;
-        color: #ff5722;  /* Orange color */
-        margin-bottom: 1rem;
-        font-weight: 500;
-    }
-
-    .skill {
-        background: #FFF3E0;  /* Orange tint */
-        color: #3c393d;
-        padding: 0.3rem 0.8rem;
-        border-radius: 20px;
-        font-size: 0.9rem;
-        font-weight: 500;
-        border: 1px solid #ff5722;  /* Orange border */
-    }
-
-    .social-link {
-        color: #ff5722;  /* Orange color */
-        font-size: 1.5rem;
-        transition: color 0.3s ease;
-    }
-
-    .social-link:hover {
-        color: #3c393d;
-    }
-
-    @media (max-width: 768px) {
-        .developers-grid {
-            grid-template-columns: 1fr;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Developers | GameBlog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
-        /* Removed last-child specific styles */
-    }
-</style>
+
+        body {
+            background: #3c393d;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            color: #ff5722;
+            text-shadow: 0 0 10px rgba(255, 87, 34, 0.2);
+        }
+
+        .developers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .developer-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border: 2px solid #ff5722;
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.1);
+        }
+
+        .developer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(255, 87, 34, 0.3);
+        }
+
+        .developer-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            border: 3px solid #ff5722;
+            object-fit: cover;
+        }
+
+        .developer-name {
+            text-align: center;
+            color: #3c393d;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .developer-role {
+            text-align: center;
+            color: #ff5722;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            justify-content: center;
+        }
+
+        .skill {
+            background: #FFF3E0;
+            color: #3c393d;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #ff5722;
+        }
+
+        .bio {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            color: #666;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-link {
+            color: #ff5722;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: #3c393d;
+        }
+
+        @media (max-width: 768px) {
+            .developers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Development Team</h1>
+        <div class="developers-grid">
+            <!-- Atharv Pose -->
+            <div class="developer-card">
+                <img src="atharv.jpg" alt="Atharv Pose" class="developer-image">
+                <h2 class="developer-name">Atharv Pose</h2>
+                <p class="developer-role">Frontend Developer</p>
+                <div class="skills">
+                    <span class="skill">HTML5</span>
+                    <span class="skill">CSS3</span>
+                    <span class="skill">JavaScript</span>
+                </div>
+                <p class="bio">Frontend maestro specializing in immersive gaming interfaces. Combines clean code with pixel-perfect design for seamless user experiences.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-codepen"></i></a>
+                </div>
+            </div>
+
+            <!-- Shivansh Kushwaha -->
+            <div class="developer-card">
+                <img src="shivansh.jpg" alt="Shivansh Kushwaha" class="developer-image">
+                <h2 class="developer-name">Shivansh Kushwaha</h2>
+                <p class="developer-role">Python Django Developer</p>
+                <div class="skills">
+                    <span class="skill">Python</span>
+                    <span class="skill">Django</span>
+                    <span class="skill">REST API</span>
+                </div>
+                <p class="bio">Backend specialist crafting robust gaming architectures. Turns coffee into clean, efficient code and scalable solutions.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-stack-overflow"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-dev"></i></a>
+                </div>
+            </div>
+
+            <!-- Suraj Layak -->
+            <div class="developer-card">
+                <img src="suraj.jpg" alt="Suraj Layak" class="developer-image">
+                <h2 class="developer-name">Suraj Layak</h2>
+                <p class="developer-role">Database Architect</p>
+                <div class="skills">
+                    <span class="skill">MySQL</span>
+                    <span class="skill">MongoDB</span>
+                    <span class="skill">Database Design</span>
+                </div>
+                <p class="bio">Data wizard optimizing gaming databases for peak performance. Ensures every byte is in its right place for lightning-fast queries.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-medium"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-aws"></i></a>
+                </div>
+            </div>
+
+            <!-- Mayuresh Rathod -->
+            <div class="developer-card">
+                <img src="mayuresh.jpg" alt="Mayuresh Rathod" class="developer-image">
+                <h2 class="developer-name">Mayuresh Rathod</h2>
+                <p class="developer-role">Moral Support</p>
+                <div class="skills">
+                    <span class="skill">Motivation</span>
+                    <span class="skill">Team Building</span>
+                    <span class="skill">Positive Vibes</span>
+                </div>
+                <p class="bio">The glue that holds the team together. Expert in caffeine management and maintaining peak developer morale during crunch time.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-slack"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced hover animation
+        document.querySelectorAll('.developer-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                card.style.transform = `
+                    perspective(1000px)
+                    rotateX(${(y - rect.height/2)/12}deg)
+                    rotateY(${-(x - rect.width/2)/12}deg)
+                    translateY(-8px)
+                `;
+                card.style.boxShadow = `0 0 25px rgba(255, 87, 34, 0.4)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 4px 15px rgba(255, 87, 34, 0.1)';
+            });
+        });
+    </script>
+</body>
+</html>
